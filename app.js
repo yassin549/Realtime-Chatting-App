@@ -1,5 +1,17 @@
 //require the express module
+const express = require("express");
+const app = express();
+const chatRouter = require("./route/chatroute");
+//database connection
+const Chat = require("./models/Chat");
+const connect = require("./dbconnect");
+//require the http module
+const http = require("http").Server(app);
 
+// require the socket.io module
+const io = require("socket.io");
+
+const port = 5000;
 
 //bodyparser middleware
 app.use(express.json());
