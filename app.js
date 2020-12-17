@@ -58,3 +58,14 @@ socket.on("connection", socket => {
   });
 });
 
+http.listen(port, async () => {
+  connect
+    .then(() => {
+      console.log("Successfully connected to MongoDB");
+    })
+    .catch(err => {
+      console.error("Error connecting to MongoDB", err);
+    });
+
+  console.log("Running on Port: " + port);
+});
