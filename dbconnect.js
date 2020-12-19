@@ -6,4 +6,7 @@ const url = "mongodb://localhost:27017/chat";
 const connect = mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true // Recommended for newer versions
+});
 
+
+module.exports = connect;
